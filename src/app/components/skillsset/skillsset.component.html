@@ -1,0 +1,37 @@
+
+
+
+
+<div class="container">
+<h1 class="bg-info text-center text-white">Todo Table</h1>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th class="text-center">title</th>
+                            <th>
+                                <select name="call" id="call">
+                                <option value="completed">completed</option>
+                                <option value="incomplet">incomplet</option>
+                                <option value="all">all</option>
+                            </select>
+                        </th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-warning " >
+                        <tr *ngFor="let todoitem of skills">
+                            <td>{{todoitem.id}}</td>
+                            <td>{{todoitem.title}}</td>
+                            <td [ngClass]="{
+                                'text-success':todoitem.completed,
+                                'text-danger':!todoitem.completed
+                            }">{{todoitem.completed}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                    
+            </div>
+        </div>
+</div>
