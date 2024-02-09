@@ -1,4 +1,4 @@
-<!--<div class="form-group">
+<div class="form-group">
     <label for="searchProduct">search Product</label>
     <input type="text" class="form-control"
     (keyup) ="onProductSearch($event)"> 
@@ -8,12 +8,12 @@
     <label for="searchProduct">search Product</label>
     <input type="text" class="form-control"
     [(ngModel)]="searchedProduct">
-    </div> -->
-<!--
+    </div> 
+
 <p class="alert alert-primary">
     {{searchedProduct}}
 </p>
--->
+
 
 
 <button *ngIf ="true" class="btn btn-primary" [disabled]="isDisabled"(click)="updatecartStatus()">Add product</button>

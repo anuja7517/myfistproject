@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <table class="table table-bordered">
-                    <thead>
+                    <thead>  
                         <tr>
                             <th>id</th>
                             <th class="text-center">title</th>
@@ -27,7 +27,7 @@
                             <td [ngClass]="{
                                 'text-success':todoitem.completed,
                                 'text-danger':!todoitem.completed
-                            }">{{todoitem.completed}}</td>
+                            }">{{todoitem.completed ? "completed":"incompleted"}}</td>
                         </tr>
                     </tbody>
                 </table>

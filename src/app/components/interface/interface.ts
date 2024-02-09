@@ -7,3 +7,9 @@ export interface Itodoes{
       title: string,
       completed: Boolean
 }
+
+
+export interface Iskill {
+  skillName  : string;
+  content : string
+}

@@ -6,6 +6,8 @@ import { ProductComponent } from './components/product/product.component';
 import { productsComponent } from './components/products/products.component';
 import { FormsModule } from '@angular/forms';
 import { SkillssetComponent } from './components/skillsset/skillsset.component';
+import { StdTableComponent } from './components/std-table/std-table.component';
+import { TabComponent } from './tab/tab.component';
 
 
 
@@ -14,7 +16,9 @@ import { SkillssetComponent } from './components/skillsset/skillsset.component';
     AppComponent,
     ProductComponent,
     productsComponent,
-    SkillssetComponent
+    SkillssetComponent,
+    StdTableComponent,
+    TabComponent
 
   ],
   imports: [

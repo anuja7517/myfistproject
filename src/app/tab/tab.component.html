@@ -1,0 +1,124 @@
+
+
+<ul class="nav nav-pills">
+    <li class="nav-item" (click)="selectSkill('javascript')">
+        <a href="javascript:;"[ngClass]="{
+            active : selectedSkillSet.toLowerCase().includes('javascript')
+        }" 
+        class="nav-link">Javascript</a>
+    </li>
+    <li class="nav-item" (click)="selectSkill('angular')">
+        <a href="javascript:;"[ngClass]="{
+            active : selectedSkillSet.toLowerCase().includes('angular')
+        }" 
+        class="nav-link">Angular</a>
+    </li>
+    <li class="nav-item" (click)="selectSkill('node')">
+        <a href="javascript:;"[ngClass]="{
+            active : selectedSkillSet.toLowerCase().includes('node')
+        }" 
+         class="nav-link">Node</a>
+    </li>
+   
+</ul>
+<div class="tabs-body">
+    <div class="card" *ngIf="selectedSkillSet.toLowerCase().includes('javascript')">
+        <div class="card-body">
+            <strong>Javascript</strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, reprehenderit 
+            accusamus! Impedit recusandae quo sit harum rem, assumenda facilis labore modi, officia 
+            cupiditate deserunt aperiam provident perspiciatis, itaque laboriosam minus?
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedSkillSet.toLowerCase().includes ('angular')">
+        <div class="card-body">
+            <strong>Angular</strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, reprehenderit 
+            accusamus! Impedit recusandae quo sit harum rem, assumenda facilis labore modi, officia 
+            cupiditate deserunt aperiam provident perspiciatis, itaque laboriosam minus?
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedSkillSet.toLowerCase().includes('node')">
+        <div class="card-body">
+            <strong>Node</strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, reprehenderit 
+            accusamus! Impedit recusandae quo sit harum rem, assumenda facilis labore modi, officia 
+            cupiditate deserunt aperiam provident perspiciatis, itaque laboriosam minus?
+        </div>
+    </div>
+</div> 
+
+<!-- refacter code -->
+  <!--    <ul class="nav nav-pills">
+            <li class="nav-item" *ngFor="let skill of skillsArr"
+            (click)="selectSkill(skill.skillName)"
+            >
+                <a href="javascript:;"
+                [ngClass]="{
+                    active : selectedSkillSet.toLowerCase().includes(skill.skillName)
+                }"
+                 class="nav-link text-center text-capitalize">
+                    {{skill.skillName}} //data 
+                </a>
+            </li>
+        </ul> 
+
+        <div class="tabs-body">
+            <ng-container *ngFor="let skill of skillsArr">
+                <div class="card" *ngIf="selectedSkillSet.toLowerCase().includes(skill.skillName)">
+                    <div class="card-body" [innerHTML]="skill.content">
+                      {{skill.content}} 
+    
+                    </div>
+            </div>
+
+           
+            </ng-container> //ng-container 
+        </div> -->
+
+
+
+
+        <!-- structural directive  use-->
+
+       <!--<div>
+            <p *ngIf="numsValue === 5">
+                the value is 5
+            </p>
+
+            <p  *ngIf="numsValue === 10" >
+                the value is 10
+            </p>
+              <p  *ngIf="numsValue === 15">
+                the value is 15
+            </p>
+          <p *ngIf="numsValue !== 5 && numsValue !== 10 && numsValue !== 15">
+                the value is anything apart from 5,10 and 15
+            </p>--> 
+            <!--<p *ngIf="[5,10,15].includes(numsValue)">
+                the value is anything apart from 5,10 and 15
+                </p>
+                
+            </div>
+    
+    --> 
+<!-- by using ngswitch  full & fill -->
+
+<h2 class="text-center">Ngswitch  full & fill</h2>
+<div [ngSwitch]="numsValue">
+    <p *ngSwitchCase="5">
+        the value is 5
+    </p>
+
+    <p  *ngSwitchCase="10">
+        the value is 10
+    </p>
+      <p  *ngSwitchCase="15">
+        the value is 15
+    </p>
+  <p *ngSwitchDefault=>
+        the value is anything apart from 5,10 and 15
+    </p>
+    
+</div>
+
